@@ -1,0 +1,104 @@
+.footer{
+    
+    .nav{
+        background-color: #eaeaea;
+        padding: 40px 20px;
+        .footer_text{
+            color: #a7a5b5;
+            font-size: 14px;
+            text-align: center;
+            margin: 0 0 29px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0 20px;
+            margin: 0 0 20px 0;
+            @media screen and (max-width: 767px){
+                flex-direction: column;
+            }
+            &.top-list{
+                li{
+                    @media screen and (max-width: 767px){
+                        margin-bottom: 15px;
+                    }
+                    &:last-child{
+                        a{
+                            border-right: none;
+                        }
+                    }
+                    a{
+                        color: #a7a5b5;
+                        font-size: 18px;
+                        display: inline-block;
+                        font-weight: 700;
+                        line-height: 1;
+                        padding: 0 10px;
+                        
+                        text-decoration: underline;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            
+            
+        }
+    }
+    .copy{
+        background-color: #f5f5f5;
+        padding: 25px 0;
+        
+        p{
+            margin: 0 0 25px;
+            text-align: center;
+            padding: 0 20px;
+            font-size: 14px;
+            color: #a7a5b5;
+            font-weight: 600;
+        }
+        .bottom-list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0 20px;
+            margin: 0;
+            @media screen and (max-width: 767px){
+                flex-direction: column;
+            }
+            li{
+                @media screen and (max-width: 767px){
+                    margin-bottom: 10px;
+                }
+                &:last-child{
+                    a{
+                        border-right: none;
+                        color: #a7a5b5;
+                    }
+                }
+                a{
+                    color: #72a5f9;
+                    font-size: 14px;
+                    line-height: 1;
+                    display: inline-block;
+                    padding: 0 10px;
+                    text-decoration: underline;
+                    border-right: 1px solid $text-color;
+                    font-weight: 600;
+                    @media screen and (max-width: 767px){
+                        border-right: none;
+                    }
+                    &:hover{
+                        
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

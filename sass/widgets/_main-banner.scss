@@ -1,0 +1,38 @@
+.main-banner{
+    background-position: center!important;
+    background-size: cover!important;
+    min-height: 406px;
+    text-align: center;
+    padding: 38px 0 22px;
+    .inner{
+        @include inner;
+    }
+    .status{
+        display: inline-block;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 0 23px 0 0;
+        background: url('/img/checkmark.png') no-repeat;
+        background-position: center right;
+        background-size: 18px 18px;
+        span{
+            color: #44d53f;            
+        }
+    }
+
+    .title{
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 38px;
+    }
+
+    .text{
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 25px 0 0 0;
+    }
+}
