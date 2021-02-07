@@ -10,12 +10,22 @@ $(document).ready(function(e){
     swipe: false
   });
     
-
+  
   $(document).on('click', '.next-slide', function(e){
     e.preventDefault();
-    console.log('asdasd');
-    $(".first-question-slider").slick('slickNext');
+    if($(this).hasClass('start-colored')){
+      $('.colored-blocks').addClass('show');
+      $(".first-question-slider").slick('slickNext');
+    }else{
+      $(".first-question-slider").slick('slickNext');
+    }
   })
   
+  $(document).on('click', '.switch-pstcd-input', function(e){
+    e.preventDefault();
+    $('.switch-postcode').toggle();
+  })
+  
+
     
 })
