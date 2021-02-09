@@ -4,6 +4,11 @@
     min-height: 406px;
     text-align: center;
     padding: 38px 0 22px;
+    @media screen and (max-width: 991px) {
+        padding: 12px 0 12px;
+        min-height: 260px;
+    }
+    
     .inner{
         @include inner;
     }
@@ -26,13 +31,27 @@
         font-size: 40px;
         font-weight: 700;
         margin-top: 38px;
+        @media screen and (max-width: 991px) {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 3px;
+        }
     }
-
+    img{
+        @media screen and (max-width: 991px) {
+            width: 50%;
+        }
+        
+    }
     .text{
         color: #ffffff;
         font-size: 14px;
         font-weight: 400;
         text-transform: uppercase;
         margin: 25px 0 0 0;
+        @media screen and (max-width: 991px) {
+            font-size: 8px;
+            margin: 14px 0 0 0;
+        }
     }
 }
