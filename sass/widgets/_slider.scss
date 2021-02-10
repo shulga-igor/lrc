@@ -243,7 +243,7 @@
     margin: 0 0 15px 0;
 }
 
-.colored-blocks{
+.colored-blocks, .success{
     display: none;
     position: fixed;
    width: 100vw;
@@ -272,7 +272,7 @@
     .titles-first{
         animation-delay: 5s;
         animation-name: titlesHide;
-        animation-duration: 50s;
+        animation-duration: 10s;
         
     }
     .titles-second{
@@ -281,7 +281,7 @@
         height: 0;
         animation-delay: 5s;
         animation-name: titlesShow;
-        animation-duration: 50s;
+        animation-duration: 10s;
     }
     .smiles{
         margin-top: 100px;
@@ -312,9 +312,117 @@
        width: 100%;
        height: 100%;
         background: #44d53f;
+
    }
    .block-second{
-        background: #894a99;   
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: #44d53f;
+        .titles {
+            padding-top: 80px;
+        }
+
+        .finish-code{
+            display: none;
+            text-align: center;
+            .titles {
+                padding-top: 50px;
+            }
+            .colored-card{
+                width: 272px;
+                margin: 80px auto 0;
+            }
+        }
+    }
+    .generate-code{
+        padding: 24px 60px;
+        font-size: 24px;
+        text-align: center;
+        border-radius: 40px;
+        background: #fff;
+        margin: 50px auto;
+        max-width: 360px;
+        color: #a0a0a0;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.fsh{
+            color: #000;
+            span{
+                color: #000;
+            }
+        }
+        span{
+            letter-spacing: 2px;
+            font-size: 24px;
+            color: #a0a0a0;
+        }
+        .odometer-digit{
+            margin: 0 6px;
+        }
+    }
+}
+
+.success{
+    display: none;
+    background: #fff;
+    .header-colored-blocks{
+        background: #44d53f;
+    }
+    .step-one-finish{
+        height: 100%;
+       .prize{
+            background: #44d53f;
+            text-align: center;
+            padding: 50px 0 60px;
+            .trofy{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                width: 180px;
+                height: 180px;
+                overflow: hidden;
+                background: #32b22e;
+                border-radius: 50%;
+            }
+            svg{
+                width: 121px;
+                height: 120px;
+            }
+       } 
+
+       .text{
+           font-size: 24px;
+           max-width: 400px;
+           margin: 54px auto 45px;
+           color: #1e1e1e;
+           text-align: center;
+       }
+       .color-text{
+           font-size: 32px;
+           color: #44d53f;
+           font-weight: 800;
+           max-width: 400px;
+           margin: 0 auto;
+           text-align: center;
+       }
+    }
+
+    .step-finish{
+        display: none;
+        background: #44d53f;
+        height: 100%;
+        padding: 0 20px;
+        .finish-img{
+            margin: 50px auto 20px;
+            display: block;
+            max-width: 615px;
+            width: 100%;
+            border-radius: 15px;
+        }
     }
 }
 
