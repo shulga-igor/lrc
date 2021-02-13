@@ -1,6 +1,6 @@
 .custom-slider{
     .item{
-        padding: 50px 20px 15px;
+        padding: 30px 20px 15px;
         outline: none;
         @media screen and (max-width: 991px) {
             padding: 20px 15px 15px;
@@ -8,7 +8,7 @@
     }
     .inner{
         width: 100%;
-        max-width: 610px;
+        max-width: 800px;
         margin: 0 auto;
         text-align: center;
     }
@@ -16,7 +16,7 @@
     .sub-title{
         color: #894a99;
         font-size: 21px;
-        margin-bottom: 35px;
+        margin-bottom: 7px;
         text-align: center;
         font-weight: 700;
         @media screen and (max-width: 991px) {
@@ -28,21 +28,27 @@
 
     .title{
         color: #1e1e1e;
-        font-size: 32px;
-        margin-bottom: 40px;
+        font-size: 31px;
+        margin-bottom: 20px;
         text-align: center;
         font-weight: 800;
         @media screen and (max-width: 991px) {
             font-size: 20px;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
     }
 
     .title_bold{
         font-size: 24px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         color: #894a99;
         font-weight: 800;
+        @media screen and (max-width: 991px) {
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+        
+        
     }
 
     .cta-blc{
@@ -51,14 +57,19 @@
         .slider-cta{
             display: inline-block;
             font-family: $fontMR;
-            font-size: 24px;
+            font-size: 22px;
             color: #fff;
             background: #44d53f;
-            padding: 13px 10px;
+            padding: 10px;
             border-radius: 50px;
             text-decoration: none;
             min-width: 150px;
-            margin: 0 20px 35px;
+            margin: 0 15px 9px;
+            transition: all linear .2s;
+            &:hover{
+                background: #06af00;
+
+            }
 
             @media screen and (max-width: 991px) {
                 font-size: 19px;
@@ -68,7 +79,6 @@
                 border-radius: 50px;
                 text-decoration: none;
                 min-width: 105px;
-                margin: 0 11px 14px;
             }
 
 
@@ -97,6 +107,7 @@
         text-align: left;
     }
    .input-filed{
+       display: block;
        font-size: 14px;
        font-weight: 700;
        color: #1e1e1e;
@@ -179,10 +190,10 @@
        display: none;
    }
    .cta-blc{
-       margin-top: 35px;
+       margin-top: 5px;
 
     @media screen and (max-width: 991px) {
-        margin-top: 10px;
+        margin-top: 5px;
     }
     
 
@@ -242,7 +253,12 @@
     font-size: 12px;
     margin: 0 0 15px 0;
 }
-
+.colored-blocks{
+    &.slide{
+        transition: all linear .1s;
+        transform: translateX(-100vw);
+    }
+}
 .colored-blocks, .success{
     display: none;
     position: fixed;
@@ -255,11 +271,49 @@
     &.show{
         display: flex;
     }
-   
+    .first-part{
+        transition: all linear .2s;
+
+    }
+    .second-part{
+        transition: all linear .2s;
+        display: none;
+
+        .colored-card{
+            opacity: 0;
+            margin: 60px auto 0;
+            display: block;
+            transition: all linear .2s;
+            @media screen and (max-width: 991px) {
+                max-width: 135px;
+            }
+           
+        }
+
+        &.fsh{
+            .colored-card{
+                opacity: 1;
+            }
+            .generate-code{
+                color: #000;
+                
+                span{
+                    color: #000;
+                }
+            }
+        }
+    }
+
+
     .header-colored-blocks{
         text-align: center;
-        padding: 15px 0 25px;
+        padding: 15px 0;
         border-bottom: 1px solid rgba(255,255,255, .5);
+        .logo{
+            img{
+                width: 122px;
+            }
+        }
     }
     .titles{
         font-size: 40px;
@@ -267,10 +321,14 @@
         text-align: center;
         color: #fff;
         padding-top: 50px;
-        
+
+        @media screen and (max-width: 991px) {
+            font-size: 30px;
+            padding-top: 35px;
+        }
     }
     .titles-first{
-        animation-delay: 5s;
+        animation-delay: 2s;
         animation-name: titlesHide;
         animation-duration: 10s;
         
@@ -279,35 +337,47 @@
         opacity: 0;
         font-size: 0;
         height: 0;
-        animation-delay: 5s;
+        animation-delay: 2s;
         animation-name: titlesShow;
         animation-duration: 10s;
     }
     .smiles{
-        margin-top: 100px;
-        width: 190px;
-        overflow: hidden;
+        width: 100%;
         margin: 100px auto 0;
-        background: #32b22e;
-        border-radius: 50%;
+        @media screen and (max-width: 991px) {
+            margin: 50px auto 0;
+        }
         &-wrap{
+            transform: translateX(100%);
             display: flex;
-            animation: 5s infinite smiles;
+            animation: 4s ease-in-out infinite smiles;
            //infinite alternate
         }
         &-item{
-            flex: 0 0 190px;
-            width: 190px;
-            height: 190px;
+            flex: 0 0 140px;
+            width: 140px;
+            height: 140px;
+            background: #32b22e;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            @media screen and (max-width: 991px) {
+                flex: 0 0 75px;
+                width: 75px;
+                height: 75px;
+            }
             svg{
-                width: 130px;
+                width: 90px;
+                @media screen and (max-width: 991px) {
+                    width: 50px;
+                }
             }
         }
 
     }
+
+
    .block-first{
        width: 100%;
        height: 100%;
@@ -330,6 +400,7 @@
                 padding-top: 50px;
             }
             .colored-card{
+                
                 width: 272px;
                 margin: 80px auto 0;
             }
@@ -348,8 +419,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @media screen and (max-width: 991px) {
+            padding: 15px 20px;
+            font-size: 18px;
+            margin: 40px 40px 0;
+            letter-spacing: 0;
+        }
         &.fsh{
             color: #000;
+            .colored-card{
+                visibility: visible;
+            }
             span{
                 color: #000;
             }
@@ -358,6 +438,10 @@
             letter-spacing: 2px;
             font-size: 24px;
             color: #a0a0a0;
+            @media screen and (max-width: 991px) {
+                font-size: 18px;
+                letter-spacing: 0;
+            }
         }
         .odometer-digit{
             margin: 0 6px;
@@ -377,6 +461,9 @@
             background: #44d53f;
             text-align: center;
             padding: 50px 0 60px;
+            @media screen and (max-width: 991px) {
+                padding: 35px 0;
+            }
             .trofy{
                 display: flex;
                 justify-content: center;
@@ -387,10 +474,18 @@
                 overflow: hidden;
                 background: #32b22e;
                 border-radius: 50%;
+                @media screen and (max-width: 991px) {
+                    width: 75px;
+                    height: 75px;
+                }
             }
             svg{
                 width: 121px;
                 height: 120px;
+                @media screen and (max-width: 991px) {
+                    width: 50px;
+                    height: 50px;
+                }
             }
        } 
 
@@ -400,6 +495,10 @@
            margin: 54px auto 45px;
            color: #1e1e1e;
            text-align: center;
+           @media screen and (max-width: 991px) {
+                font-size: 16px;
+                margin: 35px auto 25px;
+            }
        }
        .color-text{
            font-size: 32px;
@@ -408,6 +507,9 @@
            max-width: 400px;
            margin: 0 auto;
            text-align: center;
+           @media screen and (max-width: 991px) {
+                font-size: 24px;
+            }
        }
     }
 
@@ -428,13 +530,11 @@
 
 @keyframes smiles {
     from {
-      transform: translateX(0);
+      transform: translateX(100%);
     }
-    75%{
-        transform: translateX(-190px);
-    }
+
     to {
-        transform: translateX(-380px);
+        transform: translateX(-4200px);
     }
   }
 

@@ -29,24 +29,19 @@ $(document).ready(function(e){
 
   function showColoredBlc(){
     setTimeout(function(){
-      $('.block-first').hide();
-    }, 10000);
-
+      $('.first-part').hide();
+    }, 4000);
     setInterval(function(){
-      $('.block-second').show();
+      $('.second-part').fadeIn();
       odometer();
-    },10000);
-
+    },4000);
     setTimeout(function(){
-      $('.step-one').hide();
-      $('.finish-code').show();
-      $('.generate-code').addClass('fsh');
-    }, 13000);
-
+      $('.second-part').addClass('fsh');
+    }, 7000);
     setInterval(function(){
-      $('.colored-blocks').hide();
-    },16000);
-
+      $('.colored-blocks').addClass('slide');
+    }, 9000);
+    
   }
 
 
@@ -70,7 +65,8 @@ $(document).ready(function(e){
     setTimeout(function(){
       $('.step-one-finish').hide();
       $('.step-finish').show();
-    }, 5000);
+    }, 3000);
+    
   })
 
 
