@@ -17,6 +17,10 @@
         font-size: 11px;
         text-align: right;
         margin: 0 13px 0 0;
+        transition: all linear .2s;
+        span{
+            transition: all linear .2s;
+        }
     }
     @media screen and (max-width: 991px) {
         display: flex;

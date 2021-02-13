@@ -31,10 +31,13 @@ $(document).ready(function(e){
     setTimeout(function(){
       $('.first-part').hide();
     }, 4000);
-    setInterval(function(){
+    setTimeout(function(){
       $('.second-part').fadeIn();
       odometer();
-    },4000);
+    }, 8000);
+    /*setInterval(function(){
+      
+    },4000);*/
     setTimeout(function(){
       $('.second-part').addClass('fsh');
     }, 7000);
@@ -90,5 +93,19 @@ $(document).ready(function(e){
     return false;
   }
   
+
+  var block = $('.js-name span');
+    var arr = ['Bennett S, Liverpool', 'Cayden G, Manchester', 'Vincenzo M, Leicester', 'Matias H, Southampton', 'Santino G,Birmingham', 'Brendan A, Manchester', 'David A, Southampton', 'Keegan H, Birmingham', 'Xandros P, Leicester', 'Brycen C, Liverpool', 'Gregory T, London'];
+    var i = 0;
+
+    
+    var intv = setInterval(function() {
+        if (i >= arr.length) {
+            clearInterval(intv);
+        } else {
+            block.text(arr[i]);
+            ++i;
+        }
+    }, 4000);
     
 })
