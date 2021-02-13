@@ -31,13 +31,10 @@ $(document).ready(function(e){
     setTimeout(function(){
       $('.first-part').hide();
     }, 4000);
-    setTimeout(function(){
-      $('.second-part').fadeIn();
+    setInterval(function(){
+      $('.second-part').show();
       odometer();
-    }, 8000);
-    /*setInterval(function(){
-      
-    },4000);*/
+    },4000);
     setTimeout(function(){
       $('.second-part').addClass('fsh');
     }, 7000);
