@@ -30,11 +30,12 @@ $(document).ready(function(e){
   function showColoredBlc(){
     setTimeout(function(){
       $('.first-part').hide();
-    }, 4000);
-    setInterval(function(){
       $('.second-part').show();
       odometer();
-    },4000);
+    }, 4000);
+    /*setInterval(function(){
+      
+    },4000);*/
     setInterval(function(){
       $('.second-part').addClass('fsh');
     }, 6900);
