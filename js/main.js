@@ -30,12 +30,10 @@ $(document).ready(function(e){
   function showColoredBlc(){
     setTimeout(function(){
       $('.first-part').hide();
-      $('.second-part').fadeIn();
+      $('.second-part').show();
       odometer();
     }, 4000);
-    /*setInterval(function(){
-      
-    },4000);*/
+
     setInterval(function(){
       $('.second-part').addClass('fsh');
     }, 6900);
@@ -82,6 +80,7 @@ $(document).ready(function(e){
     if (validateEmail(email)) {
       $('.colored-blocks').addClass('show');
       $(".first-question-slider").slick('slickNext');
+      $('.smiles-wrap').addClass('show-anim');
       showColoredBlc();
 
 
