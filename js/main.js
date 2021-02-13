@@ -35,7 +35,7 @@ $(document).ready(function(e){
       $('.second-part').show();
       odometer();
     },4000);
-    setTimeout(function(){
+    setInterval(function(){
       $('.second-part').addClass('fsh');
     }, 7000);
     setInterval(function(){
