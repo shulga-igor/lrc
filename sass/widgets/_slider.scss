@@ -290,7 +290,16 @@
            
         }
 
+        .titles-second-step{
+            display: none;
+        } 
         &.fsh{
+            .titles-first-step{
+                display: none;
+            }
+            .titles-second-step{
+                display: block;
+            }
             .colored-card{
                 opacity: 1;
             }
@@ -302,6 +311,7 @@
                 }
             }
         }
+        
     }
 
 
@@ -422,7 +432,7 @@
         @media screen and (max-width: 991px) {
             padding: 15px 20px;
             font-size: 18px;
-            margin: 40px 40px 0;
+            margin: 40px auto 0;
             letter-spacing: 0;
         }
         &.fsh{
@@ -527,14 +537,19 @@
         }
     }
 }
-
+:root{
+    --smileWidth: -4200px;
+    @media screen and (max-width: 991px) {
+        --smileWidth: -2200px;
+    }
+}
 @keyframes smiles {
     from {
       transform: translateX(100%);
     }
 
     to {
-        transform: translateX(-4200px);
+        transform: translateX(var(--smileWidth));
     }
   }
 

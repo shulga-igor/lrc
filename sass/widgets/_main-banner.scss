@@ -78,6 +78,14 @@
         font-weight: 400;
         text-transform: uppercase;
         margin: 14px 0 0 0;
+        a{
+            color: #fff;
+            text-decoration: underline;
+            transition: all linear .3s;
+            &:hover{
+                color: #72a5f9;
+            }
+        }
         @media screen and (max-width: 991px) {
             font-size: 8px;
             margin: 14px 0 0 0;
