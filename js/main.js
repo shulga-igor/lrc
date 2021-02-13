@@ -30,7 +30,7 @@ $(document).ready(function(e){
   function showColoredBlc(){
     setTimeout(function(){
       $('.first-part').hide();
-      $('.second-part').show();
+      $('.second-part').fadeIn();
       odometer();
     }, 4000);
     /*setInterval(function(){
