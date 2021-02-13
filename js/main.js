@@ -37,7 +37,7 @@ $(document).ready(function(e){
     },4000);
     setInterval(function(){
       $('.second-part').addClass('fsh');
-    }, 6500);
+    }, 6900);
     setInterval(function(){
       $('.colored-blocks').addClass('slide');
     }, 9000);
