@@ -92,17 +92,35 @@ $(document).ready(function(e){
   
 
   var block = $('.js-name span');
-    var arr = ['Bennett S, Liverpool', 'Cayden G, Manchester', 'Vincenzo M, Leicester', 'Matias H, Southampton', 'Santino G,Birmingham', 'Brendan A, Manchester', 'David A, Southampton', 'Keegan H, Birmingham', 'Xandros P, Leicester', 'Brycen C, Liverpool', 'Gregory T, London'];
-    var i = 0;
+    var arrowName = ['Dennis', 'Howard', 'Steven', 'Yasin', 'Finn', 'Knox', 'Xever',
+      'Sterling', 'Harper', 'Elijah', 'Uzziel', 'Prince', 'Luis', 'Yusif', 'Vince', 'Major', 'Vincenzo', 'Oscar', 'Oshea', 'Axel', 'David',
+      'Jace', 'Sullivan', 'Floyd', 'Matthew', 'Dalton', 'Giovani', 'Selah', 'Robert', 'Norman', 'Izaac', 'Yasir', 'Carlos', 'Bowen',
+      'Zeppelin', 'Kobe', 'Wes', 'Uri', 'Wyatt', 'Francesco', 'Xandro', 'Miguel', 'Pierre', 'Emery', 'Harvey', 'Xandro', 'Theodore', 'Dennis',
+      'Uziah', 'Arthur', 'Marco', 'Jason', 'Luis', 'Woodrow', 'Jaxson', 'Nikko', 'Finlee', 'Xan', 'Zac', 'Vincent', 'Trevor', 'Tucker', 'Samson',
+      'Troy', 'Zeus', 'Isaac', 'Simon', 'Nathanael', 'Timothy', 'Pearson', 'Pembroke', 'Branson', 'Dean', 'Fernando', 'Isaak', 'Porter', 'Everett',
+      'Yukio', 'William', 'Gregory', 'Santiago', 'Theodore', 'Edward', 'Wylie', 'Raiden', 'Xenos', 'Tadeo', 'King', 'Felipe', 'Samir', 'Xenos', 'Neal',
+      'Soren', 'Keegan', 'Usher', 'Neal', 'Presley', 'Ben', 'Brody'];
+    var ArrayLetter = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']; 
+    var arrCity = ['Liverpool', 'Manchester', 'Leicester', 'Southampton', 'Birmingham', 'London', 'Sheffield', 'Newcastle', 'Leeds', 'Bradford', 'Bristol', 'Sunderland', 'Wolverhampton', 'Glasgow', 'Edinburgh', 'Belfast'];
 
-    
-    var intv = setInterval(function() {
-        if (i >= arr.length) {
-            clearInterval(intv);
-        } else {
-            block.text(arr[i]);
-            ++i;
-        }
-    }, 4000);
+    function randomInteger(min, max) {
+      let rand = min - 0.5 + Math.random() * (max - min + 1);
+      return Math.round(rand);
+    }
+
+    function resultRandomName(){
+      var randomName =  randomInteger(0, 98);
+      var randomLetter =  randomInteger(0, 25);
+      var randomCity =  randomInteger(0, 15);
+      var resultName = arrowName[randomName] + ' ' + ArrayLetter[randomLetter] + ', ' + arrCity[randomCity];
+      block.text(resultName);
+    }
+
+    resultRandomName();
+    setInterval(function(){
+      resultRandomName();
+    }, 4000)
+
+
     
 })
