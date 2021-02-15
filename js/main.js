@@ -92,27 +92,16 @@ $(document).ready(function(e){
   
 
   var block = $('.js-name span');
-    var arrowName = ['Dennis', 'Howard', 'Steven', 'Yasin', 'Finn', 'Knox', 'Xever',
-      'Sterling', 'Harper', 'Elijah', 'Uzziel', 'Prince', 'Luis', 'Yusif', 'Vince', 'Major', 'Vincenzo', 'Oscar', 'Oshea', 'Axel', 'David',
-      'Jace', 'Sullivan', 'Floyd', 'Matthew', 'Dalton', 'Giovani', 'Selah', 'Robert', 'Norman', 'Izaac', 'Yasir', 'Carlos', 'Bowen',
-      'Zeppelin', 'Kobe', 'Wes', 'Uri', 'Wyatt', 'Francesco', 'Xandro', 'Miguel', 'Pierre', 'Emery', 'Harvey', 'Xandro', 'Theodore', 'Dennis',
-      'Uziah', 'Arthur', 'Marco', 'Jason', 'Luis', 'Woodrow', 'Jaxson', 'Nikko', 'Finlee', 'Xan', 'Zac', 'Vincent', 'Trevor', 'Tucker', 'Samson',
-      'Troy', 'Zeus', 'Isaac', 'Simon', 'Nathanael', 'Timothy', 'Pearson', 'Pembroke', 'Branson', 'Dean', 'Fernando', 'Isaak', 'Porter', 'Everett',
-      'Yukio', 'William', 'Gregory', 'Santiago', 'Theodore', 'Edward', 'Wylie', 'Raiden', 'Xenos', 'Tadeo', 'King', 'Felipe', 'Samir', 'Xenos', 'Neal',
-      'Soren', 'Keegan', 'Usher', 'Neal', 'Presley', 'Ben', 'Brody'];
-    var ArrayLetter = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']; 
-    var arrCity = ['Liverpool', 'Manchester', 'Leicester', 'Southampton', 'Birmingham', 'London', 'Sheffield', 'Newcastle', 'Leeds', 'Bradford', 'Bristol', 'Sunderland', 'Wolverhampton', 'Glasgow', 'Edinburgh', 'Belfast'];
-
+    var arrowName = ["James F, ABERDEEN", "Dave L, SALTBURN-BY-THE-SEA", "Adriana J, LONDON", "David R, London", "David M, Manchester", "Carol H, Chippenham", "Kirsty J, BRISTOL", "Ronald C, ST. NEOTS", "Mark I, Nottingham", "Abdul I, London", "billy C, DUDLEY", "jake M, Milton Keynes", "Emma M, Lydbrook", "Madalin B, Birmingham", "David I, London", "Yvette M, LINCOLN", "Monica D, COVENTRY", "Kelly B, SWANSEA", "Julie H, WHITLEY BAY", "RAMONA D, ILFORD", "Peter C, GRAVESEND", "Heather R, Glasgow", "Tharfis S, Canterbury", "Jamie M, CANTERBURY", "Sofia J, Birmingham", "Simon B, Walsall", "Gordon M, SUTTON", "Lisa M, Poole", "Jessica S, SANDOWN", "Leslie B, Kilmarnock", "Jackie C, Liverpool", "Louii M, WARRINGTON", "Mark A, DORCHESTER", "Mark H, BINGLEY", "Rhonda P, Belfast", "Tracey F, Leek", "Lina L, LONDON", "Katie W, Hull", "Peter M, Melton Constable", "Petr K, Salford", "Claire L, SOUTHAMPTON", "Kelly H, TROWBRIDGE", "David R, BUCKIE", "Georgina B, Dartford", "Carla C, Reading", "Sarah F, BOOTLE", "Jane L, Bristol", "Marie T, GLASGOW", "Yeasin M, Coventry", "Richard B, SHEFFIELD", "wendy B, Aldershot", "Megan R, Stalybridge", "Philip H, London", "Thomas F, St. Neots", "irene H, DUNDEE", "Alison R, Ashford", "Sonita B, LONDON", "Jorja B, Halesowen", "Elaine W, Macclesfield", "Pauline S, SHEFFIELD", "Louise W, DURHAM", "Donna B, WALSALL", "Sharon K, Hull", "FERNANDO P, EDINBURGH", "Emma B, ELY", "William B, Hailsham", "Sandra T, PERTH", "Annemarie C, Wigan", "Danielle A, GATESHEAD", "Anthony P, Leeds", "Karen T, TELFORD", "Emma F, BANBURY", "Samuel C, BICESTER", "Justin M, HALESOWEN", "Christopher B, DAVENTRY", "Richard M, Bruton", "Lisa L, NORWICH", "Jamie P, NOTTINGHAM", "Hannah K, SOUTHAMPTON", "Natalia T, Coventry", "Lori R, Edinburgh", "darren W, London", "Ruth D, Edinburgh", "Teresa V, Northampton", "Brendan W, Didcot", "Sierra O, London", "Amy J, Bath", "Liam S, ANDOVER", "Pauline S, LEEDS", "Alisha R, READING", "Jodi F, RIPLEY", "Maya W, HAYES", "Kelly A, Wakefield", "Sarah C, STALYBRIDGE", "Raymond M, ELLESMERE PORT", "Pam G, PETERBOROUGH", "Janice L, Kingsbridge", "Joanne L, St. Helens", "Glenda M, DUNSTABLE", "Joe B, LONDONDERRY"];
+   
     function randomInteger(min, max) {
       let rand = min - 0.5 + Math.random() * (max - min + 1);
       return Math.round(rand);
     }
 
     function resultRandomName(){
-      var randomName =  randomInteger(0, 98);
-      var randomLetter =  randomInteger(0, 25);
-      var randomCity =  randomInteger(0, 15);
-      var resultName = arrowName[randomName] + ' ' + ArrayLetter[randomLetter] + ', ' + arrCity[randomCity];
+      var randomName =  randomInteger(0, 99);
+      var resultName = arrowName[randomName];
       block.text(resultName);
     }
 
